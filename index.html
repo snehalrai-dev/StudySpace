@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace | Student Productivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">StudySpace<span>.</span></div>
+        <p>Your personal study companion</p>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">YOUR SPACE, YOUR PACE</p>
+                <h1>Make today count.</h1>
+                <p>Small steps every day lead to big results.</p>
+            </div>
+            <div class="date-card">
+                <span>TODAY</span>
+                <strong id="today-date">Your study day</strong>
+            </div>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <span>Total Tasks</span>
+                <h2 id="total-tasks">0</h2>
+            </article>
+            <article class="stat-card">
+                <span>Completed</span>
+                <h2 id="completed-tasks">0</h2>
+            </article>
+            <article class="stat-card">
+                <span>Pending</span>
+                <h2 id="pending-tasks">0</h2>
+            </article>
+        </section>        
+<section class="panel daily-summary">
+    <p class="eyebrow">YOUR DAILY OVERVIEW</p>
+    <h2>Today's Summary</h2>
+
+    <div class="summary-grid">
+        <div class="summary-item">
+            <span>Tasks completed</span>
+            <strong id="summary-completed">0</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Tasks remaining</span>
+            <strong id="summary-pending">0</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Daily progress</span>
+            <strong id="summary-progress">0%</strong>
+        </div>
+    </div>
+
+    <p id="summary-message">
+        Start with one small task. You've got this!
+    </p>
+</section>
+
+
+        <section class="content-grid">
+
+            <section class="panel tasks-panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">STAY ON TRACK</p>
+                        <h2>My Tasks</h2>
+                    </div>
+                </div>
+
+                <form id="task-form" class="task-form">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="What do you need to do?"
+                        required
+                    >
+                    <button type="submit">Add Task +</button>
+                </form>
+
+                
+<div class="progress-section">
+    <div class="progress-heading">
+        <span>Task Progress</span>
+        <span id="progress-text">0% completed</span>
+    </div>
+
+    <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Task completion progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress-bar"
+    >
+        <div id="progress-fill" class="progress-fill"></div>
+    </div>
+</div>
+
+<ul id="task-list" class="task-list"></ul>
+<p id="empty-message">Your task list is empty. Add your first task!</p>
+
+            </section>
+
+            <section class="panel planner-panel">
+                <p class="eyebrow">PLAN WITH PURPOSE</p>
+                <h2>Study Planner</h2>
+                <p class="panel-description">
+                    Choose your main focus for today.
+                </p>
+
+                <label for="study-subject">Subject</label>
+                <input
+                    type="text"
+                    id="study-subject"
+                    placeholder="e.g. Python, Mathematics"
+                >
+
+                <label for="study-time">Study duration</label>
+                <select id="study-time">
+                    <option value="25">25 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="60">60 minutes</option>
+                    <option value="90">90 minutes</option>
+                </select>
+
+                
+<div id="timer-display" class="timer-display">25:00</div>
+
+<div class="timer-controls">
+    <button type="button" id="start-study">Start</button>
+    <button type="button" id="pause-study">Pause</button>
+    <button type="button" id="reset-study">Reset</button>
+</div>
+
+<p id="study-message" class="study-message">
+    Choose a subject and start your focus session.
+</p>
+
+            </section>
+
+        </section>
+
+        <footer>
+            <p>Built for better study days · StudySpace</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
